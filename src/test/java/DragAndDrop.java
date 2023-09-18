@@ -28,18 +28,19 @@ public class DragAndDrop {
         //Проверьте, что прямоугольники действительно поменялись
     }
 
-        @Test
-        void dragAndDropTest(){
-            //Откройте https://the-internet.herokuapp.com/drag_and_drop
-            open("");
+    //сработало
+    @Test
+    void dragAndDropTest() {
+        //Откройте https://the-internet.herokuapp.com/drag_and_drop
+        open("");
 
-            //Перенесите прямоугольник А на место В
-            int x = $("#column-b").getLocation().getX();
-            int y = $("#column-b").getLocation().getY();
-            $("#column-a").dragAndDrop(to($("#column-b")));
+        //Перенесите прямоугольник А на место В
+        int x = $("#column-b").getLocation().getX();
+        int y = $("#column-b").getLocation().getY();
+        $("#column-a").dragAndDrop(to($("#column-b")));
 
-            //Проверьте, что прямоугольники действительно поменялись
-            $("#column-a").$("header").shouldHave(text("B"));
-            $("#column-b").$("header").shouldHave(text("A"));
+        //Проверьте, что прямоугольники действительно поменялись
+        $("#column-a").$("header").shouldHave(text("B"));
+        $("#column-b").$("header").shouldHave(text("A"));
     }
 }

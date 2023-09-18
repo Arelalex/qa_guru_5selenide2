@@ -3,7 +3,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.open;
 
 public class Hover {
     @BeforeAll
@@ -13,7 +14,7 @@ public class Hover {
     }
 
     @Test
-    void hoverTest (){
+    void hoverTest() {
         //открыть главную страницу GitHub
         open("");
 
